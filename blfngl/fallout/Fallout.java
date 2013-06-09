@@ -11,6 +11,7 @@ import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
+import net.minecraft.stats.Achievement;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.ChestGenHooks;
@@ -75,7 +76,6 @@ import blfngl.fallout.item.BaseFood;
 import blfngl.fallout.item.BaseItem;
 import blfngl.fallout.item.ItemPipboy;
 import blfngl.fallout.item.ItemPortalActivator;
-import blfngl.fallout.item.ItemPortalPlacer;
 import blfngl.fallout.item.ItemSyringe;
 import blfngl.fallout.melee.BaseMelee;
 import blfngl.fallout.melee.WeapBallisticFist;
@@ -197,6 +197,8 @@ public class Fallout
 	public static final Item aNail = new BaseItem(665).setUnlocalizedName("Nails").setCreativeTab(TabFalloutAmmo);
 	public static final Item a50MG = new BaseItem(644).setUnlocalizedName("50MG").setCreativeTab(TabFalloutAmmo);
 	public static final Item cellMF = new BaseItem(413).setUnlocalizedName("MFCell").setCreativeTab(TabFalloutAmmo);
+	public static final Item a32 = new BaseItem(728).setUnlocalizedName("32Caliber").setCreativeTab(TabFalloutAmmo);
+	public static final Item aDart = new BaseItem(731).setUnlocalizedName("Dart").setCreativeTab(TabFalloutAmmo);
 
 	public static final Item incinerator = new GunIncinerator(509).setUnlocalizedName("Incinerator").setCreativeTab(TabFalloutHeavy);
 	public static final Item rifleLaserRCW = new ItemGun(510, 3, 60, 2, (int) 0.2, "blfngl.LaserFire", "blfngl.RCWReload", cellMF, 1995).setUnlocalizedName("LaserRCW").setCreativeTab(TabFalloutEnergy);
@@ -403,7 +405,7 @@ public class Fallout
 	public static final Item riflePlasma = new ItemGun(572, 7, 24, 2, 2, "blfngl.PlasmaRifleFire", "Blfngl.PlasmaRifleReload", cellMF, 370).setUnlocalizedName("PlasmaRifle").setCreativeTab(TabFalloutEnergy);
 	public static final Item magRail = new BaseItem(573).setUnlocalizedName("MagRail").setCreativeTab(TabFalloutMisc);
 	public static final Item a10mm = new BaseItem(575).setUnlocalizedName("10mmRound").setCreativeTab(TabFalloutAmmo);
-	public static final Item pistol10mm = new ItemGun(574, 3, 12, 1, 1, "blfngl.10MMFire", "blfngl.10MMReload", a10mm, 395).setUnlocalizedName("10mmPistol").setCreativeTab(TabFalloutPistol);
+	public static final Item pistol10mm = new ItemGun(574, 3, 12, 1, 1, "blfngl.10mmFire", "blfngl.10mmReload", a10mm, 395).setUnlocalizedName("10mmPistol").setCreativeTab(TabFalloutPistol);
 	public static final Item shiskebabFlaming = new WeapFlamingShish(576).setUnlocalizedName("Shishkebabf").setCreativeTab(TabFalloutWeap);
 	public static final Item rifleGauss = new ItemGun(577, 12, 1, 4, 3, "blfngl.GaussFire", "blfngl.GaussReload", cellMF, 395).setUnlocalizedName("GaussRifle").setCreativeTab(TabFalloutEnergy);
 	public static final Item bubbleGum = new BaseFood(578, 1, 0.3F, false).setUnlocalizedName("BubbleGum").setCreativeTab(TabFalloutFood);
@@ -480,13 +482,13 @@ public class Fallout
 	public static final Item smg45Auto = new ItemGun(657, 4, 30, 2.2, 0.5, "blfngl.45Fire", "Blfngl.AssaultReload", a45Auto, 2995).setUnlocalizedName("45AutoSub").setCreativeTab(TabFalloutSMG);
 	public static final Item smg9mm = new ItemGun(658, 2, 30, 2.7, 0.5, "blfngl.9mmFire", "Blfngl.9mmReload", a9mm, 2745).setUnlocalizedName("9mmSub").setCreativeTab(TabFalloutSMG);
 	public static final Item smgVance = new ItemGun(659, 4, 60, 2.2, 0.5, "blfngl.9mmFire", "Blfngl.9mmReload", a9mm, 3745).setUnlocalizedName("VancesSub").setCreativeTab(TabFalloutSMG);
-	public static final Item smg10mm = new ItemGun(660, 3, 30, 2.7, 0.5, "blfngl.10MMFire", "Blfngl.10MMReload", a10mm, 2495).setUnlocalizedName("10mmSub").setCreativeTab(TabFalloutSMG);
-	public static final Item smgSleepytyme = new ItemGun(661, 5, 40, 2.7, 0.5, "blfngl.SleepytymeFire", "Blfngl.10MMReload", a10mm, 2495).setUnlocalizedName("Sleepytyme").setCreativeTab(TabFalloutSMG);
+	public static final Item smg10mm = new ItemGun(660, 3, 30, 2.7, 0.5, "blfngl.10mmFire", "Blfngl.10mmReload", a10mm, 2495).setUnlocalizedName("10mmSub").setCreativeTab(TabFalloutSMG);
+	public static final Item smgSleepytyme = new ItemGun(661, 5, 40, 2.7, 0.5, "blfngl.SleepytymeFire", "Blfngl.10mmReload", a10mm, 2495).setUnlocalizedName("Sleepytyme").setCreativeTab(TabFalloutSMG);
 	public static final Item smg127 = new ItemGun(662, 4, 21, 2, 0.5, "blfngl.357Fire", "Blfngl.127SmgReload", a127, 2495).setUnlocalizedName("127Sub").setCreativeTab(TabFalloutSMG);
 	public static final Item smgNailGun = new ItemGun(663, 2, 90, 2.7, 0.3, "blfngl.NailgunFire", "Blfngl.9mmReload", aNail, 2745).setUnlocalizedName("NailGun").setCreativeTab(TabFalloutSMG);
-	public static final Item smg22 = new ItemGun(664, 1, 180, 2.3, 0.5, "blfngl.Silenced22Fire", "Blfngl.10MMReload", a22LR, 4995).setUnlocalizedName("22Sub").setCreativeTab(TabFalloutSMG);
+	public static final Item smg22 = new ItemGun(664, 1, 180, 2.3, 0.5, "blfngl.Silenced22Fire", "Blfngl.10mmReload", a22LR, 4995).setUnlocalizedName("22Sub").setCreativeTab(TabFalloutSMG);
 	public static final Item CZ57 = new ItemGun(666, 5, 120, 4, 0.3, "blfngl.MinigunFire", "Blfngl.MinigunReload", a5mm, 7995).setUnlocalizedName("CZ57").setCreativeTab(TabFalloutHeavy);
-	public static final Item pistolWeathered10mm = new ItemGun(667, 5, 12, 1.3, 1, "blfngl.10mmFire", "Blfngl.10MMReload", a10mm, 545).setUnlocalizedName("Weathered10mm").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolWeathered10mm = new ItemGun(667, 5, 12, 1.3, 1, "blfngl.10mmFire", "Blfngl.10mmReload", a10mm, 545).setUnlocalizedName("Weathered10mm").setCreativeTab(TabFalloutPistol);
 
 	//KEY: ID, damage, clip size, reload time, fire time, fire sound, reload sound
 	public static final Item shotgunCaravan = new ItemGun(668, 5, 2, 1.5, 1, "blfngl.CaravanShotgunFire", "Blfngl.CaravanShotgunReload", aGauge20, 695).setUnlocalizedName("CaravanShotgun").setCreativeTab(TabFalloutShotgun);
@@ -552,7 +554,29 @@ public class Fallout
 	public static BlockPortalActivator blockPortalActivator = (BlockPortalActivator) new BlockPortalActivator(2008).setUnlocalizedName("BlockPortalActivator");
 	public static BlockWastelandPortal portalWateland = (BlockWastelandPortal) new BlockWastelandPortal(2009).setUnlocalizedName("WastelandPortal");
 	public static Item itemPortalActivator = new ItemPortalActivator(724).setUnlocalizedName("PortalActivator");
-	public static Item portalPlacer = new ItemPortalPlacer(725).setUnlocalizedName("PortalPlacer");
+
+	//ID, damage, clip size, reloadtick, firemax, firesound, reloadsound, ammo, gun health
+	public static final Item pistol32 = new ItemGun(725, 2, 5, 2.3, 2.5, "blfngl.32Fire", "Blfngl.32Reload", a32, 556).setUnlocalizedName("32Pistol").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolSilenced10mm = new ItemGun(726, 4, 12, 1.3, 1, "blfngl.Silenced10mmFire", "Blfngl.10mmReload", a10mm, 333).setUnlocalizedName("Silenced10mmPistol").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolChinese = new ItemGun(727, 3, 10, 2.5, 1, "blfngl.ChinesePistolFire", "Blfngl.10mmReload", a10mm, 1250).setUnlocalizedName("ChinesePistol").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolColonelAutumn10mm = new ItemGun(729, 5, 12, 1, 1, "blfngl.10mmFire", "Blfngl.10mmReload", a10mm, 577).setUnlocalizedName("ColonelAutumn10mmPistol").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolZhuRong = new ItemGun(730, 4, 10, 2.3, 2.5, "blfngl.ChinesePistolFire", "Blfngl.10mmReload", a10mm, 1667).setUnlocalizedName("ZhuRong").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolDartGun = new ItemGun(732, 3, 1, 2.3, 2.5, "blfngl.DartGunFire", "Blfngl.DartGunReload", aDart, 883).setUnlocalizedName("DartGun").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolScoped44 = new ItemGun(733, 5, 6, 3, 3, "blfngl.44Fire", "Blfngl.44Reload", a44, 229).setUnlocalizedName("Scoped44").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolBlackhawk = new ItemGun(734, 8, 6, 3, 3, "blfngl.44Fire", "Blfngl.44Reload", a44, 218).setUnlocalizedName("Blackhawk").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolCallahans = new ItemGun(735, 10, 6, 3, 3, "blfngl.44Fire", "Blfngl.44Reload", a44, 205).setUnlocalizedName("Callahans").setCreativeTab(TabFalloutPistol);
+	public static final Item pistolPaulsons = new ItemGun(736, 7, 6, 3, 3, "blfngl.44Fire", "Blfngl.44Reload", a44, 178).setUnlocalizedName("Paulsons").setCreativeTab(TabFalloutPistol);
+	
+	public static final Item railwaySpikes = new BaseItem(737).setUnlocalizedName("RailwaySpikes").setCreativeTab(TabFalloutAmmo);
+	public static final Item rifleOlPainless = new ItemGun(738, 9, 5, 2, 3, "blfngl.HuntingRifleFire", "Blfngl.HuntingRifleReload", a32, 556).setUnlocalizedName("OlPainless").setCreativeTab(TabFalloutRifle);
+	public static final Item rifleLeverAction = new ItemGun(739, 7, 10, 3.3, 3, "blfngl.44Fire", "Blfngl.44Reload", a44, 200).setUnlocalizedName("LeverActionRifle").setCreativeTab(TabFalloutRifle);
+	public static final Item rifleBackwater = new ItemGun(740, 8, 10, 3.3, 3, "blfngl.44Fire", "Blfngl.44Reload", a44, 519).setUnlocalizedName("Backwater").setCreativeTab(TabFalloutRifle);
+	public static final Item rifleLincoln = new ItemGun(741, 12, 15, 3.3, 3, "blfngl.LincolnFire", "Blfngl.LincolnReload", a44, 400).setUnlocalizedName("LincolnRepeater").setCreativeTab(TabFalloutRifle);
+	public static final Item rifleRailway = new ItemGun(742, 8, 8, 2.7, 2, "blfngl.RailwayFire", "Blfngl.RailwayReload", railwaySpikes, 224).setUnlocalizedName("RailwayRifle").setCreativeTab(TabFalloutRifle);
+
+	//Work on achievements?
+	//static final Achievement getTungsten = new Achievement(2001, "getTungsten", 1, -2, ingotTungsten, null).registerAchievement();
+	//public static AchievementPage page1 = new AchievementPage("Fallout Achievements", ach1, ach2, ach3, ach4);
 
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event)
@@ -572,7 +596,7 @@ public class Fallout
 		var2.logoFile = "/blfngl/fallout/textures/blflogo.png";
 		var2.url = "http://www.minecraftforum.net/topic/1667023-";
 		System.out.println("Blfngl's Fallout Mod Loaded. Lololololol.");
-		
+
 		proxy.registerSoundHandler();
 	}
 

@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import blfngl.fallout.Fallout;
+import blfngl.fallout.gun.ItemGun;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -135,5 +136,23 @@ public class GunHandler extends Fallout
 		LanguageRegistry.addName(pistolPulseGun, "Pulse Gun");
 		LanguageRegistry.addName(pistolHyperbreederAlpha, "MF Hyperbreeder Alpha");
 		LanguageRegistry.addName(pistolSonicEmitter, "Sonic Emitter - Revalation");
+
+		LanguageRegistry.addName(pistol32, ".32 Pistol");
+		LanguageRegistry.addName(pistolSilenced10mm, "Silenced 10mm Pistol");
+		LanguageRegistry.addName(pistolChinese, "Chinese Pistol");
+		LanguageRegistry.addName(pistolColonelAutumn10mm, "Colonel Autumn's 10mm Pistol");
+		LanguageRegistry.addName(pistolZhuRong, "Zhu-Rong v418 Chinese pistol");
+		LanguageRegistry.addName(pistolDartGun, "Dart Gun");
+		LanguageRegistry.addName(pistolScoped44, "Scoped .44 Magnum");
+		LanguageRegistry.addName(pistolBlackhawk, "Blackhawk");
+		LanguageRegistry.addName(pistolCallahans, "Callahan's Revolver");
+		LanguageRegistry.addName(pistolPaulsons, "Paulson's Revolver");
+
+		LanguageRegistry.addName(rifleOlPainless, "Ol' Painless");
+		LanguageRegistry.addName(rifleLeverAction, "Lever Action Rifle");
+		LanguageRegistry.addName(rifleBackwater, "Backwater");
+		LanguageRegistry.addName(rifleLincoln, "Lincoln's Repeater");
+		LanguageRegistry.addName(rifleRailway, "Railway Rifle");
+
 	}
 }

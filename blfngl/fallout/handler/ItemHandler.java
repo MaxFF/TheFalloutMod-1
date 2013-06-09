@@ -201,10 +201,9 @@ public class ItemHandler extends Fallout
 		GameRegistry.addRecipe(new ItemStack(cylinder), new Object [] {"XXX", "X*X", 'X', Item.ingotIron, '*', ingotTungsten});
 
 		LanguageRegistry.addName(aGauge20, "20 Gauge Shotgun Shells");
-		
 		LanguageRegistry.addName(itemPortalActivator, "Portal Activator");
-		LanguageRegistry.addName(portalPlacer, "Portal Placer");
-		
 		LanguageRegistry.addName(pipboy, "Pipboy 3000 (WIP)");
+		LanguageRegistry.addName(a32, ".32 Caliber Rounds");
+		LanguageRegistry.addName(aDart, "Dart");
 	}
 }
