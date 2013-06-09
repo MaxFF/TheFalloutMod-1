@@ -165,16 +165,16 @@ public class ItemHandler extends Fallout
 		LanguageRegistry.addName(modAntiMaterielSupressor, "Anti Materiel Rifle Supressor");
 		LanguageRegistry.addName(modAntiMaterielCustomBolt, "Anti Materiel Rifle Custom Bolt");
 		LanguageRegistry.addName(modAssaultCarbineExtendedMags, "Assault Carbine Extended Mags");
-		LanguageRegistry.addName(modAssaultCarbineForgedReciever, "Assault Carbine Forged Receiver");
+		LanguageRegistry.addName(modAssaultCarbineForgedReceiver, "Assault Carbine Forged Receiver");
 		LanguageRegistry.addName(modAssaultCarbineLightBolt, "Assault Cabine Light Bolt");
 		LanguageRegistry.addName(modAutomaticRifleInternals, "Automatic Rifle Upgraded Internals");
-		LanguageRegistry.addName(modBrushGunForgedReciever, "Brush Gun Forged Receiver");
+		LanguageRegistry.addName(modBrushGunForgedReceiver, "Brush Gun Forged Receiver");
 		LanguageRegistry.addName(modCowboyRepeaterCustomAction, "Cowboy Repeater Custom Action");
 		LanguageRegistry.addName(modCowboyRepeaterLongTube, "Cowboy Repeater Long Tube");
 		LanguageRegistry.addName(modHuntingRifleExtendedMag, "Hunting Rifle Extended Mags");
 		LanguageRegistry.addName(modHuntingRifleCustomAction, "Hunting Rifle Custom Action");
 		LanguageRegistry.addName(modLMGExpandedDrums, "Light Machine Gun Expanded Drums");
-		LanguageRegistry.addName(modServiceRifleForgedReciever, "Service Rifle Forged Receiver");
+		LanguageRegistry.addName(modServiceRifleForgedReceiver, "Service Rifle Forged Receiver");
 		LanguageRegistry.addName(modServiceRifleCustomSprings, "Service Rifle Custom Springs");
 		LanguageRegistry.addName(modSniperSupressor, "Sniper Rifle Supressor");
 		LanguageRegistry.addName(modVarmintNightScope, "Varmint Rifle Night Scope");
@@ -183,18 +183,18 @@ public class ItemHandler extends Fallout
 
 		LanguageRegistry.addName(fixer, "Fixer");
 
-		LanguageRegistry.addName(superConductor, "Super Conductor");
-		GameRegistry.addRecipe(new ItemStack(superConductor), new Object [] {"X*X", "X*X", 'X', Item.ingotIron, '*', Item.ingotGold});
+		LanguageRegistry.addName(superconductor, "Super Conductor");
+		GameRegistry.addRecipe(new ItemStack(superconductor), new Object [] {"X*X", "X*X", 'X', Item.ingotIron, '*', Item.ingotGold});
 		LanguageRegistry.addName(plasmaChamber, "Plasma Chamber");
 		GameRegistry.addRecipe(new ItemStack(plasmaChamber), new Object [] {"XXX", "* *", "XXX", 'X', technetiumPlate, '*', ingotTungsten});
-		LanguageRegistry.addName(electroMagnet, "Electromagnet");
+		LanguageRegistry.addName(electromagnet, "Electromagnet");
 		LanguageRegistry.addName(magnetClaws, "Electromagnetic Claws");
 		LanguageRegistry.addName(particleDiverter, "Particle Diverter");
 		GameRegistry.addRecipe(new ItemStack(particleDiverter), new Object [] {"X X", "   ", " X ", 'X', crystalArray});
 		LanguageRegistry.addName(carbonFiberHousing, "Carbon Fiber Housing");
 		GameRegistry.addRecipe(new ItemStack(carbonFiberHousing), new Object [] {" X ", "X*X", "&&&", 'X', carbon, '*', Item.diamond, '&', tungstenPlate});
 		LanguageRegistry.addName(energyRifleBarrel, "Energy Rifle Barrel");
-		GameRegistry.addRecipe(new ItemStack(energyRifleBarrel), new Object [] {"X*&", "^  ", 'X', particleDiverter, '^', carbonFiberHousing, '*', plasmaChamber, '&', superConductor});
+		GameRegistry.addRecipe(new ItemStack(energyRifleBarrel), new Object [] {"X*&", "^  ", 'X', particleDiverter, '^', carbonFiberHousing, '*', plasmaChamber, '&', superconductor});
 		LanguageRegistry.addName(drum, "Drum");
 		GameRegistry.addRecipe(new ItemStack(drum), new Object [] {"X*X", "* *", "X*X", 'X', Item.leather, '*', Item.ingotIron});
 		LanguageRegistry.addName(cylinder, "Cylinder");
@@ -204,6 +204,7 @@ public class ItemHandler extends Fallout
 		
 		LanguageRegistry.addName(itemPortalActivator, "Portal Activator");
 		LanguageRegistry.addName(portalPlacer, "Portal Placer");
-
+		
+		LanguageRegistry.addName(pipboy, "Pipboy 3000 (WIP)");
 	}
 }

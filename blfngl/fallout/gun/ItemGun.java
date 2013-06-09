@@ -131,7 +131,7 @@ public class ItemGun extends Item
 
 	public void addInformation(ItemStack var1, EntityPlayer var2, List var3, boolean var4)
 	{
-		gunHealth = var1.getItemDamage(); // /cnd;
+		gunHealth = var1.getItemDamage();
 		var3.add("\u00A74DAM: " + (double)damage/2/*((double)damage/2)*((double)0.54 + gunHealth * (1-(double)0.54D))*/); //TODO After fixed condition appearance
 		var3.add("\u00A79Clip size: " + rounds + "/" + clipSize + " Ammo Loaded");
 		var3.add("\u00A72Ammo type: " + ammoType.getItemDisplayName(new ItemStack(ammoType)));
